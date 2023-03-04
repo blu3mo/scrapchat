@@ -50,5 +50,6 @@ def get_chain(
         combine_docs_chain=doc_chain,
         question_generator=question_generator,
         callback_manager=manager,
+        return_source_documents=True,
     )
     return qa
