@@ -1,4 +1,4 @@
-# 🦜️🔗 ChatLangChain
+# 🦜️🔗 ScrapChat - LangChain Chat for Scrapbox
 
 This repo is an implementation of a locally hosted chatbot specifically focused on question answering over the [LangChain documentation](https://langchain.readthedocs.io/en/latest/).
 Built with [LangChain](https://github.com/hwchase17/langchain/) and [FastAPI](https://fastapi.tiangolo.com/).

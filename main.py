@@ -58,8 +58,8 @@ async def websocket_endpoint(websocket: WebSocket):
                 {"question": question, "chat_history": chat_history}
             )
             print(len(result['source_documents']))
-            print(result['source_documents'][0])
-            print(result['source_documents'][1])
+            for doc in result["source_documents"]:
+                print(doc)
             chat_history.append((question, result["answer"]))
 
             end_resp = ChatResponse(sender="bot", message="", type="end")

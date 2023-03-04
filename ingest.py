@@ -9,9 +9,9 @@ from langchain.vectorstores.faiss import FAISS
 from scrapchat.ScrapboxLoader import ScrapboxLoader
 
 
-def ingest_docs():
+def ingest_scrapbox():
     """Get documents from web pages."""
-    loader = ScrapboxLoader("keidaroo-blu3mo.json")
+    loader = ScrapboxLoader("source_docs/blu3mo_cleaned.json")
     raw_documents = loader.load()
     print(raw_documents)
     text_splitter = RecursiveCharacterTextSplitter(
@@ -19,17 +19,12 @@ def ingest_docs():
         chunk_overlap=200,
     )
     documents = text_splitter.split_documents(raw_documents)
-    print(documents)
-    #embeddings = OpenAIEmbeddings()
-    #vectorstore = FAISS.from_documents(documents, embeddings)
+    embeddings = OpenAIEmbeddings()
+    vectorstore = FAISS.from_documents(documents, embeddings)
 
     # Save vectorstore
-    #with open("vectorstore.pkl", "wb") as f:
-        #pickle.dump(vectorstore, f)
-
-# def ingest_scrapbox():
-#     return
-#
+    with open("vectorstore.pkl", "wb") as f:
+        pickle.dump(vectorstore, f)
 
 if __name__ == "__main__":
-    ingest_docs()
+    ingest_scrapbox()
