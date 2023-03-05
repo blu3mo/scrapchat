@@ -11,6 +11,7 @@ from scrapchat.ScrapboxLoader import ScrapboxLoader
 
 def ingest_scrapbox():
     """Get documents from web pages."""
+    # Replace this with your own json file path
     loader = ScrapboxLoader("source_docs/blu3mo_cleaned.json")
     raw_documents = loader.load()
     print(raw_documents)

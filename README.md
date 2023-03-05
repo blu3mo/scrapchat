@@ -39,3 +39,9 @@ Question-Answering has the following steps, all handled by [ChatVectorDBChain](h
 1. Given the chat history and new user input, determine what a standalone question would be (using GPT-3).
 2. Given that standalone question, look up relevant documents from the vectorstore.
 3. Pass the standalone question and relevant documents to GPT-3 to generate a final answer.
+
+## How to import your own Scrapbox project
+1. Export json file from your scrapbox project
+2. Change path in ingest.py to your json file
+3. Run ingest.sh to update vectorstore.pkl
+4. Run the app.
