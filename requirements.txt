@@ -1,13 +1,13 @@
-openai
+openai==0.27.0
 fastapi
 black
 isort
 websockets
 pydantic
-langchain
+langchain==0.0.100
 uvicorn
 jinja2
-faiss-cpu
+faiss-cpu==1.7.3
 bs4
 unstructured
 libmagic
