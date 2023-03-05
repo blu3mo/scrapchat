@@ -135,7 +135,9 @@ dmypy.json
 
 .DS_Store
 
-vectorstore.pkl
 langchain.readthedocs.io/
 
 test_docs/
+.vercel
+
+.space
